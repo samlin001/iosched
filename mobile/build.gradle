@@ -103,13 +103,15 @@ android {
         disable "InvalidPackage", "MissingTranslation"
     }
 
-    testBuildType "staging"
+    // testBuildType "staging"
 }
 
 dependencies {
     implementation project(":shared")
     testImplementation project(':test-shared')
     testImplementation project(':androidTest-shared')
+    androidTestImplementation project(':test-shared')
+    androidTestImplementation project(':androidTest-shared')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
